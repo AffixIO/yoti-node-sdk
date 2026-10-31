@@ -4,7 +4,7 @@
     "allowlist": [
       "GHSA-hp3w-g68c-fv3c", // from jest - no fix available at time of writing
       "GHSA-vfj7-8cjw-p6xm", // from eslint-config-airbnb-extended - no fix available at time of writing
-      "GHSA-3g3m-2fjr-6pw4", // glob in the test toolchain; the fix requires a major version outside the Node 14 support range
-      "GHSA-g3hv-75wg-m249" // minimatch in the lint/test toolchain; the fix requires a major version outside the Node 14 support range
+      "GHSA-3g3m-2fjr-6pw4|*", // glob in the test toolchain; the fix requires a major version outside the Node 14 support range
+      "GHSA-g3hv-75wg-m249|*" // minimatch in the lint/test toolchain; the fix requires a major version outside the Node 14 support range
     ]
 }
