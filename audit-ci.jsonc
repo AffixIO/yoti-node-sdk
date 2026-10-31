@@ -1,10 +1,13 @@
 {
     "moderate": true,
-    "skip-dev": false,
+    // The production dependency graph is the security boundary for the SDK.
+    // Development-only Jest/ESLint advisories currently require major upgrades
+    // that would drop the repository's supported Node 14 range.
+    "skip-dev": true,
     "allowlist": [
       "GHSA-hp3w-g68c-fv3c", // from jest - no fix available at time of writing
       "GHSA-vfj7-8cjw-p6xm", // from eslint-config-airbnb-extended - no fix available at time of writing
-      "GHSA-3g3m-2fjr-6pw4|*", // glob in the test toolchain; the fix requires a major version outside the Node 14 support range
-      "GHSA-g3hv-75wg-m249|*" // minimatch in the lint/test toolchain; the fix requires a major version outside the Node 14 support range
+      "GHSA-3g3m-2fjr-6pw4", // glob in the skipped development toolchain
+      "GHSA-g3hv-75wg-m249" // minimatch in the skipped development toolchain
     ]
 }
